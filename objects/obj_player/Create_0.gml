@@ -14,10 +14,14 @@ run_timer = 0
 
 cooldown = 0
 
+key = false
+hideHud = false
+
 solid_objs = [
 	obj_ground, 
 	obj_slope,
 	obj_switch_block,
+	obj_lock,
 ]
 
 solid_but_not_solid_objs = [
@@ -39,6 +43,7 @@ function panic(time)
 {
 	alarm_set(0,time * 60)
 	show_debug_message("panic")
+	audio_stop_all()
 	audio_play_sound(mus_escape, 0, true)
 	audio_play_sound(snd_hit, 1, false)
 	isPanic = true

@@ -5,6 +5,7 @@ if (switched)
 }
 else
 {
-	sprite_index = noone;
+	sprite_index = noone
+	mask_index = noone
 	image_index = 0
 }

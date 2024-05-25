@@ -1,7 +1,7 @@
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 
-if (room != room_last and room != room_first)
+if (room != room_last and room != room_first and room != hub1 and !hideHud)
 {
 	draw_text(5,5, "X: " + string(x) + " X speed: " + string(move_x))
 	draw_text(5,25, "Y: " + string(y) + " Y speed: " + string(move_y))
@@ -15,10 +15,15 @@ if (room != room_last and room != room_first)
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
 
-	draw_sprite_stretched(spr_tv, 0, 1155, 40, 64*3, 48*3)
+		draw_sprite_stretched(spr_tv, 0, 1155, 40, 64*3, 48*3)
 	
 	draw_text_transformed(1234, 120, string(score), 3, 3, sin(step) * 5)
-
+	
+	if (global.key)
+	{
+		draw_sprite_stretched(spr_key, 0, 1147, 150, 64, 64)
+	}
+	
 	if (isPanic)
 	{
 		if (alarm[0] < 20 * 60)

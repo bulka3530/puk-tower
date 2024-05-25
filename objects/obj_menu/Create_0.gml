@@ -8,3 +8,5 @@ step = 0
 global.seconds = 0
 global.minuts = 0
 global.msTimer4gxGames = 0
+
+global.key = false

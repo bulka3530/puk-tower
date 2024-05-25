@@ -1,7 +1,9 @@
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 
-draw_text_transformed_colour(1366 / 2, 300,"puk tower",  5, 5, 0, c_white, c_white, c_white, c_white, 1)
+
+draw_sprite_stretched(title, 0, 1366 / 2 - 180, 150, 360, 180)
+//draw_text_transformed_colour(1366 / 2, 300,"puk tower",  5, 5, 0, c_white, c_white, c_white, c_white, 1)
 draw_text_transformed_colour(1366 / 2, 350,"demo",  3, 3, 0, c_white, c_white, c_white, c_white, 1)
 
 if (option == 1)
